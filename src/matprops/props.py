@@ -5,6 +5,8 @@ from resources.configs.props import *
 from resources.utils.props import *
 from resources.utils.figure import *
 
+def AreaProp1(data, feature=None, p_name=None, p_desc=None, title=None, legend=False, p_cols=8):
+    pass
 
 def AreaProp(dataset, col_name, cols=8, labels=True, label_loc="inc", title=None, title_loc="tl", bgcolor="#707070",
              description=None):
