@@ -20,16 +20,6 @@ setup(
     keywords="matplotlib, visualization, proportional charts",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    install_requires=[
-        "numpy >= 1.22.0",
-        "pandas >= 1.3.5",
-        "matplotlib >= 3.5.1"
-    ],
-    extras_require={
-        "dev": [
-            "pytest >= 6.2.5"
-        ]
-    },
     url='https://github.com/shammeer-s/matprops',
     author='Mohammed Shammeer',
     author_email='mohammedshammeer.s@gmail.com',
