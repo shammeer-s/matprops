@@ -17,6 +17,7 @@ setup(
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent"
     ],
+    setup_requires=['wheel'],
     keywords="matplotlib, visualization, proportional charts",
     long_description=long_description,
     long_description_content_type="text/markdown",

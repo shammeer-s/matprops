@@ -1,6 +1,7 @@
 from matBase.configs.props import PropConfig
 from matprops.utils.common import infer_and_validate_kwargs
 from matBase.data.MatData import MatData
+from matBase.configs.testnew import PropConfig
 
 def AreaProp(data, props=8, width=18, **kwargs):
     defaults = {
