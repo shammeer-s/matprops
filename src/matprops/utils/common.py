@@ -1,8 +1,8 @@
 import json
-from matBase.utils.common import get_function_stack
+from matpropsbase.utils import common as utils
 
-def infer_and_validate_kwargs(**kwargs):
-    method = get_function_stack()
+def infer_and_validate_kwargs(kwargs):
+    method = utils.get_function_stack()
     with open("rules.json", 'r') as file:
         data = json.load(file)
         if method in data:

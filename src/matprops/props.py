@@ -1,7 +1,5 @@
 import matplotlib
 import matplotlib.pyplot as plt
-
-from resources.configs.props import *
 from resources.utils.props import *
 from resources.utils.figure import *
 
