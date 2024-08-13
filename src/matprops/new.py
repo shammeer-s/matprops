@@ -2,7 +2,7 @@ from utils.args import ArgMap
 from matpropsbase import data
 import pandas as pd
 def AreaProp(db, **kwargs):
-    kwargs = ArgMap(kwargs)
+    AMap = ArgMap(kwargs)
 
     # Build MatData object and infer data
     db = data.Builder(db, kwargs)
