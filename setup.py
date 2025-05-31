@@ -6,7 +6,7 @@ long_description = (here / "README.md").read_text(encoding="utf-8")
 
 setup(
     name='matprops',
-    version='1.0.4.4',
+    version='1.0.4.5',
     packages=find_packages(where="src"),
     package_dir={'': 'src'},
     classifiers=[
@@ -21,9 +21,9 @@ setup(
     long_description=long_description,
     long_description_content_type="text/markdown",
     install_requires=[
-        "numpy >= 1.22.0",
-        "pandas >= 1.3.5",
-        "matplotlib >= 3.5.1"
+        "numpy ~= 2.2.6",
+        "pandas ~= 2.2.3",
+        "matplotlib ~= 3.10.3"
     ],
     extras_require={
         "dev": [

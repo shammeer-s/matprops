@@ -45,7 +45,8 @@ Reducing the limits is mandatory as the matprops is all about proportional chart
 
 Simple square area proportional charts are capable of showing some insights through this data
 ```python
-props.AreaProp(dataset, "Men (%)", labels=True, title="Country", description="Capital")
+fig = props.AreaProp(dataset, "Men (%)", labels=True, title="Country", description="Capital")
+fig.show()
 ```
 
 ![Output](https://github.com/shammeer-s/matprops/blob/master/output.png?raw=true)
