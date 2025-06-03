@@ -7,16 +7,41 @@ import warnings
 from matprops.utils import *
 from matprops import config
 
+def prop():
+    pass
+
+def testAreaProp(
+        dataset,
+        selector,
+        cols=8
+):
+    max_rows = math.ceil(len(dataset) / cols) if len(dataset) > cols else 1
+
+    if dataset is not None and cols is not None:
+        fig, ax = plt.subplots(max_rows, 2)  # Todo
+    else:
+        raise Exception("Exception occurred: Dataset or columns not provided.")
+
+    if isinstance(col_name, str):
+        col_name = [col_name]
+
+    for index, row in dataset.iterrows():
+        ax = fig.add_subplot(max_rows, cols, index + 1)
+
+
 
 def AreaProp(dataset, col_name, cols=8, labels=True, label_loc="inc", title=None,
              title_loc="tl", bgcolor="#707070",
              description=None,
              labelcolor="white"):
 
-    fig = plt.figure()
-    max_rows = math.ceil(len(dataset) / cols) if len(dataset) > cols else 1
-    if dataset is not None and cols is not None:
-        fig = plt.figure(figsize=(18, 2 * max_rows))
+    # fig = plt.figure()
+    # max_rows = math.ceil(len(dataset) / cols) if len(dataset) > cols else 1
+    # if dataset is not None and cols is not None:
+    #     fig = plt.figure(figsize=(18, 2 * max_rows))
+    # else:
+    #     raise Exception("Exception occurred: Dataset or columns not provided.")
+
 
     if isinstance(col_name, str):
         col_name = [col_name]

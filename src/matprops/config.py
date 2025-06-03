@@ -1,6 +1,7 @@
 from matprops.layouts import CLayouts
 import math
 import warnings
+from matplotlib.patches import Rectangle
 
 layout = CLayouts()
 class PropConfig:
@@ -114,3 +115,12 @@ class PropConfig:
                 col_name)  # Return the layout for the specific column
         return None  # Return None if labels are not enabled or col_name is not in label_col
 
+class PropConfigtest:
+    def __init__(self, hatch=None, ):
+        self.hatch = hatch
+
+    def get_prop(self, ax):
+        ax.add_patch(Rectangle((0, 0), 2, 2, fill=False, hatch=self.hatch))
+        ax.text(1, -0.5, f"' {self.hatch} '", size=15, ha="center")
+        ax.axis('equal')
+        ax.axis('off')
