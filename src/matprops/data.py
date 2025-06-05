@@ -18,9 +18,15 @@ ptype_map = {
         "min_ndim": 2,
         "max_ndim": 3
     },
+    'stack': {
+        "function": 'StackProp',
+        "min_ndim": 2,
+        "max_ndim": 3
+    },
 }
 
-class construct:
+
+class DataConstruct:
     def __init__(self, data, col=None, title=None, ptype=None):
         self.dtype = self._detect_type(data)
         self.dlen = None
