@@ -9,7 +9,7 @@ class ColorConfig:
         self.default = ['red', 'green', 'blue']
         self.n = n
         self.cmap = self._set_cmap(cmap)
-        self._colors = self._generate_colors()
+        self.colors = self._generate_colors()
 
     def _set_cmap(self, cmap):
         if cmap is None:
@@ -30,7 +30,7 @@ class ColorConfig:
 
 
     def get_cmap(self):
-        return ListedColormap(self._colors)
+        return ListedColormap(self.colors)
 
     def __iter__(self):
         self._iter_index = 0
@@ -41,6 +41,6 @@ class ColorConfig:
             raise ValueError("Cannot iterate when `n` is not set.")
         if self._iter_index >= self.n:
             raise StopIteration
-        color = self._colors[self._iter_index]
+        color = self.colors[self._iter_index]
         self._iter_index += 1
         return color

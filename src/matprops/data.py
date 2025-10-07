@@ -1,12 +1,6 @@
 import numpy as np
 import pandas as pd
 
-type_map = {
-    np.ndarray: 'numpy',
-    pd.DataFrame: 'pandas',
-    dict: 'dict'
-}
-
 ptype_map = {
     'area': {
         "function": 'AreaProp',
@@ -22,6 +16,11 @@ ptype_map = {
         "function": 'StackProp',
         "min_ndim": 2,
         "max_ndim": 3
+    },
+    'bi': {
+        "function": 'BiProp',
+        "min_ndim": 2,
+        "max_ndim": 2
     },
 }
 
@@ -49,6 +48,11 @@ class DataConstruct:
             )
 
     def _detect_type(self, data):
+        type_map = {
+            np.ndarray: 'numpy',
+            pd.DataFrame: 'pandas',
+            dict: 'dict'
+        }
         for t, name in type_map.items():
             if isinstance(data, t):
                 return name
